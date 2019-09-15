@@ -7,16 +7,20 @@ const app = express(); // Creating an Express instance
 
 app.use('*', function logGetRequests(req, res, next) {
     // eslint-disable-next-line no-console
-    console.log('someone made a request with GET method');
+    console.log('someone made a request with another method');
     next();
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/api', apiRouter);
+app.use('/api', apiRouter);
 
 app.get('/', function(req, res) {
     res.send('index page, triggered by GET /');
+});
+
+app.get('*', function(req, res) {
+    res.status(404).send('Not found');
 });
 
 module.exports = app;
