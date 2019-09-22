@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MessageForm from './MessageForm';
 
 function App() {
   return (
@@ -10,12 +11,8 @@ function App() {
         <p>
           This is where you can send a message to a license plate
         </p>
-        <form >
-        License: <input type="text" name="License"/><br/><br/>
-        Message: <textarea type="text" name="Body"/><br/>
-        <input type="submit" value="Submit"/>
-      </form>
       </header>
+      <MessageForm />
 
     </div>
   );
