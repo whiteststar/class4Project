@@ -1,0 +1,12 @@
+    
+    fetch(
+        "/messages", {
+            method: "POST",
+            headers: {
+            "content-type": "application/json"
+            },
+            body: JSON.stringify(data)
+        }
+        ).then(response => response.json());
+    body: this.state.body,
+            license_plate: this.state.license_plate
