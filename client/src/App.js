@@ -6,19 +6,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+{/*         <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          This is where you can send a message to a license plate
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <form >
+        License: <input type="text" name="License"/><br/><br/>
+        Message: <textarea type="text" name="Body"/><br/>
+        <input type="submit" value="Submit"/>
+      </form>
       </header>
+
     </div>
   );
 }
