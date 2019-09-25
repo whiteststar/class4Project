@@ -24,6 +24,12 @@ class MessageForm extends Component {
             }).then(response => response.json());
         console.log('added');
         };
+        /*        const response  = await fetch(`${baseUrl}/todos`, {
+            method: 'POST',
+            ...init,
+            body: JSON.stringify(todo)
+        });
+        return response.json();*/
 
     
     handleSubmit = async (event) => {
